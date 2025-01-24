@@ -1,7 +1,7 @@
 /* Red background and bold white text */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #e74c3c; /* Red background */
+    background-color: #ba4949; /* Red background */
     color: white; /* White text */
     display: flex;
     justify-content: center;
