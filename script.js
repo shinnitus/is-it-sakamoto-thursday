@@ -20,18 +20,39 @@ function checkIfSakamotoThursday() {
     const now = new Date();
     const currentDay = now.getDay();
 
-    // If today is Thursday (4), show the "Yes" image, else show the "No" image
+    // If today is Thursday (4), show the "Yes" image, trigger confetti, else show the "No" image
     const headerImage = document.getElementById("header-gif");
 
     if (currentDay === 4) {
         // It's Thursday - show "Yes" image
-        headerImage.src = "https://media1.tenor.com/m/x8XfgngoQ4AAAAAC/sakamoto-days-sakamoto.gif"; // Replace with your GIF for Thursday
+        headerImage.src = "your-sakamoto-thursday-image-url.gif"; // Replace with your GIF for Thursday
         document.getElementById("sakamoto-check").innerHTML = "Is it Sakamoto Thursday yet? Yes! Never kill yourself!";
+        
+        // Trigger School Pride Confetti
+        startConfetti();
     } else {
         // It's not Thursday - show "No" image
         headerImage.src = "https://64.media.tumblr.com/56921db8647db48fd21a7ee4caae73d8/41ee50be040f0264-d5/s500x750/a1597c7937124ddcd53178579dffd5178976b17e.gif"; // Replace with your GIF for non-Thursday
         document.getElementById("sakamoto-check").innerHTML = "Is it Sakamoto Thursday yet? No! Fuck my fujo life!";
     }
+}
+
+// Function to start School Pride confetti animation
+function startConfetti() {
+    confetti({
+        particleCount: 150,
+        spread: 70,
+        origin: { y: 0.6 },
+        colors: [
+            '#FF0000', // Red
+            '#FF7F00', // Orange
+            '#FFFF00', // Yellow
+            '#00FF00', // Green
+            '#0000FF', // Blue
+            '#4B0082', // Indigo
+            '#8B00FF'  // Violet
+        ], // Rainbow colors for School Pride
+    });
 }
 
 function updateCountdown() {
