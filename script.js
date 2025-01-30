@@ -25,7 +25,7 @@ function checkIfSakamotoThursday() {
 
     if (currentDay === 4) {
         // It's Thursday - show "Yes" image
-        headerImage.src = "https://media1.tenor.com/m/x8XfgngoQ4AAAAAC/sakamoto-days-sakamoto.gif"; // Replace with your GIF for Thursday
+        headerImage.src = "https://media1.tenor.com/m/xiwSjevNs1gAAAAd/smile-lu-shaotang.gif"; // Replace with your GIF for Thursday
         document.getElementById("sakamoto-check").innerHTML = "Is it Sakamoto Thursday yet? Yes! Never kill yourself!";
         
         // Trigger School Pride Confetti
